@@ -9,8 +9,8 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity implements Comunicador{
     RecyclerView rv;
-    SeriesAdapter adapter;
-    ArrayList<Serie> series;
+    /*SeriesAdapter adapter;
+    ArrayList<Serie> series;*/
     LinearLayoutManager lManager;
 
     @Override
@@ -20,9 +20,10 @@ public class MainActivity extends AppCompatActivity implements Comunicador{
     }
 
     @Override
-    public void Responder(String datos){
+    public void responder(String datos){
         android.app.FragmentManager fragmentManager = getFragmentManager();
         fragtwo ftwo = (fragtwo) fragmentManager.findFragmentById(R.id.ftwo_element);
-        fragtwo.cambiarTexto(datos);
+        fragtwo.cambiartxt(datos);
     }
+
 }

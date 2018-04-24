@@ -16,7 +16,7 @@ public class fragtwo extends Fragment {
     String  textoGuardado;
 
     @Override public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
-            View rootView = inflater.inflate(R.layout.ftwo,container,false);
+            View rootView = inflater.inflate(R.layout.fragment_fragtwo,container,false);
             if(savedInstanceState==null){
 
             }else{
@@ -34,12 +34,12 @@ public class fragtwo extends Fragment {
     }
 
 
-    @Override public void onSaveInstaceState(Bundle outState){
+    @Override public void onSaveInstanceState(Bundle outState){
         super.onSaveInstanceState(outState);
         outState.putString("texto", textoGuardado);
     }
 
-    public void cambiarTexto(String texto){
+    public void cambiartxt(String texto){
         this.textoGuardado = texto;
         tv.setText(texto);
     }
